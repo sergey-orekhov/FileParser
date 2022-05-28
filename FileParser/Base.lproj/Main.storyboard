@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File URL :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab9-iM-PYf" userLabel="url label">
+                                <rect key="frame" x="30" y="74" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter file url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fgx-Hd-L5k" userLabel="url text field">
+                                <rect key="frame" x="30" y="105" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="dRC-av-KzZ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHw-Hj-hzY" userLabel="filter label">
+                                <rect key="frame" x="30" y="165" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter filter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ejs-Z7-Rdm" userLabel="filter text field">
+                                <rect key="frame" x="30" y="196" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwu-IS-AYh">
+                                <rect key="frame" x="83" y="280" width="248" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="MNv-MI-0iy" userLabel="height = 40"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="runBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Tj-WI-Tyv"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o9O-Yf-sTc">
+                                <rect key="frame" x="30" y="370" width="354" height="492"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iwu-IS-AYh" firstAttribute="top" secondItem="Ejs-Z7-Rdm" secondAttribute="bottom" constant="50" id="01g-vG-WTN"/>
+                            <constraint firstItem="o9O-Yf-sTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2t1-51-kQU"/>
+                            <constraint firstItem="o9O-Yf-sTc" firstAttribute="top" secondItem="iwu-IS-AYh" secondAttribute="bottom" constant="59" id="44K-Ke-9fp"/>
+                            <constraint firstItem="Fgx-Hd-L5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="62y-IJ-GpI"/>
+                            <constraint firstItem="o9O-Yf-sTc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8HI-tN-qrN"/>
+                            <constraint firstItem="pHw-Hj-hzY" firstAttribute="top" secondItem="Ab9-iM-PYf" secondAttribute="bottom" constant="70" id="AxM-eN-hXa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fgx-Hd-L5k" secondAttribute="trailing" constant="30" id="Dka-0P-iqo"/>
+                            <constraint firstItem="Ab9-iM-PYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ESX-Ua-HFy"/>
+                            <constraint firstItem="iwu-IS-AYh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gs1-nJ-0ee"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o9O-Yf-sTc" secondAttribute="bottom" id="Li0-vi-Eks"/>
+                            <constraint firstItem="Ab9-iM-PYf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="N3B-kQ-dvB"/>
+                            <constraint firstItem="Ejs-Z7-Rdm" firstAttribute="top" secondItem="pHw-Hj-hzY" secondAttribute="bottom" constant="10" id="Pb1-Rl-rCz"/>
+                            <constraint firstItem="Ejs-Z7-Rdm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RgD-5z-I3x"/>
+                            <constraint firstItem="iwu-IS-AYh" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.6" id="YS9-d6-g2d"/>
+                            <constraint firstItem="pHw-Hj-hzY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Zji-yz-xVb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ejs-Z7-Rdm" secondAttribute="trailing" constant="30" id="d3Q-gK-1KP"/>
+                            <constraint firstItem="Fgx-Hd-L5k" firstAttribute="top" secondItem="Ab9-iM-PYf" secondAttribute="bottom" constant="10" id="jba-Rb-8OI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterText" destination="Ejs-Z7-Rdm" id="xZI-Nm-4uL"/>
+                        <outlet property="resultsTable" destination="o9O-Yf-sTc" id="Yqx-dd-e2u"/>
+                        <outlet property="runBtn" destination="iwu-IS-AYh" id="jZi-S4-1zH"/>
+                        <outlet property="urlText" destination="Fgx-Hd-L5k" id="r5G-kR-ZU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
